@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "Sada-e-Kisan",
+    "slug": "sada-e-kisan",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./shared/assets/logo.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./shared/assets/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FAF6F0"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Sada-e-Kisan needs camera access to capture crop leaf photos for disease diagnosis.",
+        "NSMicrophoneUsageDescription": "Sada-e-Kisan needs microphone access to record Urdu voice queries."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./shared/assets/logo.png",
+        "backgroundColor": "#1B4332"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.INTERNET"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Sada-e-Kisan to access your camera to scan crop leaves for disease diagnosis."
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "Allow Sada-e-Kisan to access your microphone to record Urdu voice queries."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Sada-e-Kisan to select crop leaf photos from your gallery for diagnosis."
+        }
+      ]
+    ]
+  }
+}
